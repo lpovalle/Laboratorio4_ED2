@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lab 4</title>
+</head>
+<body>
+{ 'Pizzas' : [{
+  <ul class="pizzas">
+  <% for(var i=0; i<pizzas.length; i++) {%>
+    <li class="pizza">
+      <span><%= "'Nombre' :" + " '" + pizzas[i].Nombre + "' , " %></span>
+      <br/>
+      <span><%= "'Descripcion' :" + " '" + pizzas[i].Descripcion + "' "%></span>
+      <br/>
+      <span><%= "'Ingredientes' :" + " '" + pizzas[i].Ingredientes + "' "%></span>
+      <br/>
+      <span><%= "'Tamaño' :" + " '" + pizzas[i].Tamaño + "' "%></span>
+      <br/>
+      <span><%= "'Porciones' :" + " '" + pizzas[i].Porciones + "' " %></span>
+      <br/>
+      <span><%= "'Extra queso' :" + " '" + pizzas[i].Extra + "' }," %></span>
+    </li>
+  <% } %>
+  </ul>
+]}
+
+  <form action="/pizzas" method="POST">
+    <input type="text" placeholder="Nombre" name="Nombre">
+    <input type="text" placeholder="Descripción" name="Descripcion">
+    <input type="text" placeholder="Ingredientes" name="Ingredientes">
+    <input type="text" placeholder="Tamaño" name="Tamaño">
+    <input type="text" placeholder="Cantidad de porciones" name="Porciones">
+    <input type="checkbox" placeholder="Extra queso" name="Extra">Extra Queso?
+    <button type="submit">Crear nueva pizza</button>
+  </form>
+</body>
+</html>
