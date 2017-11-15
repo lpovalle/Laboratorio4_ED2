@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Lab 4</title>
+  <script src="main.js"></script>
+</body>
 </head>
 <body>
 { 'Pizzas' : [{
@@ -24,6 +26,7 @@
   <% } %>
   </ul>
 ]}
+<br/>
 
   <form action="/pizzas" method="POST">
     <input type="text" placeholder="Nombre" name="Nombre">
@@ -34,5 +37,10 @@
     <input type="checkbox" placeholder="Extra queso" name="Extra">Extra Queso?
     <button type="submit">Crear nueva pizza</button>
   </form>
+
+  <div>
+    <h2>Replace last quote written by Master Yoda with a quote written by Darth Vadar</h2>
+    <button id="update"> Darth Vadar invades! </button>
+  </div>
 </body>
 </html>
