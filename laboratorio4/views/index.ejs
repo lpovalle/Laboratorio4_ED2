@@ -1,46 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Lab 4</title>
-  <script src="main.js"></script>
-</body>
+    <meta charset="UTF-8">
+    <title>Lab 4</title>
+    <script src="main.js"></script>
+    </body>
 </head>
+
 <body>
-{ 'Pizzas' : [{
-  <ul class="pizzas">
-  <% for(var i=0; i<pizzas.length; i++) {%>
-    <li class="pizza">
-      <span><%= "'Nombre' :" + " '" + pizzas[i].Nombre + "' , " %></span>
-      <br/>
-      <span><%= "'Descripcion' :" + " '" + pizzas[i].Descripcion + "' "%></span>
-      <br/>
-      <span><%= "'Ingredientes' :" + " '" + pizzas[i].Ingredientes + "' "%></span>
-      <br/>
-      <span><%= "'Tamaño' :" + " '" + pizzas[i].Tamaño + "' "%></span>
-      <br/>
-      <span><%= "'Porciones' :" + " '" + pizzas[i].Porciones + "' " %></span>
-      <br/>
-      <span><%= "'Extra queso' :" + " '" + pizzas[i].Extra + "' }," %></span>
-    </li>
-  <% } %>
-  </ul>
-]}
-<br/>
+    { 'Pizzas' : [{
+    <ul class="pizzas">
+        <% for(var i=0; i<pizzas.length; i++) {%>
+            <li class="pizza">
+                <span>
+                    <%= "'Nombre' :" + " '" + pizzas[i].Nombre + "' , " %>
+                </span>
+                <br/>
+                <span>
+                    <%= "'Descripcion' :" + " '" + pizzas[i].Descripcion + "' "%>
+                </span>
+                <br/>
+                <span>
+                    <%= "'Ingredientes' :" + " '" + pizzas[i].Ingredientes + "' "%>
+                </span>
+                <br/>
+                <span>
+                    <%= "'Tamaño' :" + " '" + pizzas[i].Tamaño + "' "%>
+                </span>
+                <br/>
+                <span>
+                    <%= "'Porciones' :" + " '" + pizzas[i].Porciones + "' " %>
+                </span>
+                <br/>
+                <span>
+                    <%= "'Extra queso' :" + " '" + pizzas[i].Extra + "' }," %>
+                </span>
+            </li>
+            <% } %>
+    </ul>
+    ]}
+    <br/>
+    <form action="/pizzas" method="POST">
+        <input type="text" placeholder="Nombre" name="Nombre" id="_nombre">
+        <input type="text" placeholder="Descripción" name="Descripcion" id="_desc">
+        <input type="text" placeholder="Ingredientes" name="Ingredientes" id="_ingr">
+        <input type="text" placeholder="Tamaño" name="Tamaño" id="_tamano">
+        <input type="text" placeholder="Cantidad de porciones" name="Porciones" id="_porciones">
+        <input type="checkbox" placeholder="Extra queso" name="Extra" id="_extra">Extra Queso?
+        <button type="submit">Crear nueva pizza</button>
+    </form>
 
-  <form action="/pizzas" method="POST">
-    <input type="text" placeholder="Nombre" name="Nombre">
-    <input type="text" placeholder="Descripción" name="Descripcion">
-    <input type="text" placeholder="Ingredientes" name="Ingredientes">
-    <input type="text" placeholder="Tamaño" name="Tamaño">
-    <input type="text" placeholder="Cantidad de porciones" name="Porciones">
-    <input type="checkbox" placeholder="Extra queso" name="Extra">Extra Queso?
-    <button type="submit">Crear nueva pizza</button>
-  </form>
-
-  <div>
-    <h2>Replace last quote written by Master Yoda with a quote written by Darth Vadar</h2>
-    <button id="update"> Darth Vadar invades! </button>
-  </div>
+    <div>
+        <span>Reemplazar</span>
+        <button id="update">Reemplazar </button>
+    </div>
+    <div>
+        <span>Eliminar</span>
+        <input type="text" name="aborrar" id="d" placeholder="Nombre de la pizza que desea borrar">
+        <button id="delete">Eliminar </button>
+    </div>
 </body>
+
 </html>
